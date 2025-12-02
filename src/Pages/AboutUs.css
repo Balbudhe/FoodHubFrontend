@@ -1,0 +1,20 @@
+.about-sec{
+    height: auto;
+    background-color: #f7f7f7;
+    padding: 5rem;
+}
+.abouts-item{
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.abouts-item h3{
+    color: #d92827;
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+.abouts-item p{
+    padding-bottom: 1rem;
+    font-size: 14px;
+    color: #555555;
+}

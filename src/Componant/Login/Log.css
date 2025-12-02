@@ -1,0 +1,123 @@
+
+/* Background Container */
+.foodhub-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8BG02AkIkk7_e8-sv5pahKsp5X0FNs3E-A&s") center/cover no-repeat;
+  position: relative;
+}
+
+/* Blur Overlay */
+.bg-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Left Section With Food Banner */
+.left-food {
+  width: 40%;
+  height: 70%;
+  padding-left: 3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.left-food h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffcb05;
+}
+
+.left-food p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Login Box */
+.login-card {
+  height: auto;
+  width: 25%;
+  background: #ffffffd9;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0px 0px 25px rgba(255, 90, 90, 0.4);
+  z-index: 2;
+}
+
+.login-card h2 {
+  color: #d92827;
+  margin-bottom: 1.5rem;
+}
+
+.sub {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.login-card input {
+  width: 100%;
+  height: 2rem;
+  padding-left: 2px;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid #d92827;
+  outline: none;
+}
+
+.forget-sec{
+    text-align: end;
+    margin-bottom: 1rem;
+}
+.forget-sec a{
+    color: #d92827;
+  font-size: 14px;
+  text-decoration: none;
+}
+.login-btn{
+    margin-top: 0.8rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+}
+.login-btn button:hover{
+  background-color: #b11616;
+}
+.login-btn button{
+    width:100%;
+    background-color: #d92827;
+    border: none;
+    border-radius: 11px;
+    height: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 550;
+    cursor: pointer;
+}
+.reset-sec{
+   margin-top: 1rem;
+  color: #e76363;
+  font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+.reset-sec a{
+   color: #d92827;
+  margin-left: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}

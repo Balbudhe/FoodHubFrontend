@@ -1,0 +1,112 @@
+.restro-sec {
+  height: auto;
+  padding: 2rem 0rem 1rem 1.5rem;
+ 
+}
+#restr-p {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 5rem;
+}
+
+#descip {
+  margin-top: 3rem;
+}
+.restroshop-sec {
+  height: auto;
+  width: 100%;
+  margin-top: 3.5rem;
+}
+#total-p {
+  font-size: 23px;
+  font-weight: 1000;
+}
+.foods-items {
+  display: flex;
+  height: auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.foods {
+  height: 60vh;
+  width: 23%;
+}
+.foods:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+  z-index: 2;
+}
+
+.foods img {
+  height: 55%;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.descri-sec {
+  padding: 0.5rem;
+}
+.product-name {
+  width: 250px;
+}
+#pro-name{
+  font-size: 18px;
+}
+.price-time {
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#price {
+  font-size: 16px;
+  font-weight: 550;
+}
+.descri-sec p {
+  font-weight: 600;
+  font-size: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#time-p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+#prod-desc {
+  margin-top: 0.5rem;
+  font-size: 16px;
+  font-weight: 550;
+  color: #02060c99;
+
+  display: -webkit-box; /* enables flex-like behavior for text */
+  -webkit-line-clamp: 1; /* show only 2 lines */
+  -webkit-box-orient: vertical; /* required for line clamp */
+  overflow: hidden; /* hide overflowed text */
+  text-overflow: ellipsis;
+  
+}
+.addbtn-sec {
+  margin-top: 1rem;
+  height: 5.3vh;
+  border: 1.4px solid #d92827;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.addbtn-sec button {
+  height: 100%;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: #d92827;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 550;
+}
+.additional-info{
+  display: none;
+}

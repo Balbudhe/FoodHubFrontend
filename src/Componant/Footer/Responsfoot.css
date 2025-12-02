@@ -1,0 +1,52 @@
+@media only screen and (max-width:480px) {
+    .footer-sec{
+        /* margin-top: 58.3rem; */
+        width: 100%;
+       
+        height: auto;
+    }
+    .footer{
+        height: auto;
+        flex-direction: column;
+    }
+    .sec1{
+        width: 100%;
+        text-align: center;
+    }
+    .sec1 ul{
+        display: block;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    .sec1 ul li{
+        height: 3rem;
+        margin-top: 1.5rem;
+        border-bottom: 1px solid #c4bebe9c;
+    }
+    .sec1 ul li a, .sec1 ul li{
+       font-size: 18px;
+    }
+    .platform-sec{
+        justify-content: center;
+        gap: 18px;
+        height: 40%;
+    }
+    .platform{
+    height: 100%;
+    width: 5%;
+}
+.platform i{
+    font-size: 20px;
+    color: #ffffff;
+}
+.copy-rightsec{
+    padding: 0px 2rem 0px 1rem ;
+    height: 5rem;
+}
+.copy-rightsec img{
+    height: 35%;
+}
+.copy-rightsec p{
+    font-size: 12px;
+}
+}

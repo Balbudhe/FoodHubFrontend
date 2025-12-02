@@ -1,0 +1,64 @@
+@media only screen and (max-width: 480px) {
+  .restro-sec {
+    width: auto;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+  }
+  #restr-p {
+    margin-top: 4.5rem;
+    font-size: 30px;
+  }
+  #descip {
+    font-size: 16px;
+  }
+  .restroshop-sec {
+    margin-top: 4rem;
+  }
+  #total-p {
+    font-size: 25px;
+  }
+  .foods-items {
+    margin-top: 3rem;
+    width: auto;
+    gap: 18px;
+  }
+  .foods {
+    height: 45vh;
+    width: 45%;
+  }
+  .product-name {
+    width: 155px;
+  }
+  .price-time {
+    padding: 0.5rem;
+  }
+  #pro-name {
+    font-size: 15px;
+  }
+  #price {
+    font-size: 17px;
+  }
+  #time-p {
+  font-size: 10px;
+   color: #02060c9d;
+ 
+}
+#prod-desc {
+  margin-top: 0.5rem;
+  font-size: 15px;
+  width: 100%;
+  font-weight: 550;
+}
+
+  .addbtn-sec {
+  margin-top: 1.3rem;
+  height: 3.5vh;
+  
+}
+.addbtn-sec button {
+  
+  font-size: 16px;
+}
+
+}
+

@@ -1,0 +1,164 @@
+.Home-section{
+    height: 280vh;
+}
+.courusel-view{
+    height: 82vh;
+  background-color: #d92827;
+}
+.home-item{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.home-image{
+    height: 100%;
+    width: 23%;
+}
+
+.home-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.headline-sec{
+    height: 100%;
+    width: 80%;
+}
+
+.head-sec{
+    width: 90%;
+    text-align: center;
+    margin-top: 5.5rem;
+}
+.head-sec p{
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.home-image1{
+    width: 25%;
+    height: 100%;
+}
+
+.home-image1 img{
+     height: 100%;
+    width: 100%;
+}
+.head-item{
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 3.4rem;
+    
+}
+.head-item img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.product-sect{
+    height: 100vh;
+    width: 100%;
+    
+}
+.food-opt{
+    height: 40%;
+    width: 80%;
+    padding: 2rem 5rem 14rem 0.5rem;
+    margin-top: 5rem;
+    margin-left: 6.6rem;
+}
+.products {
+   height: 100%;
+    width: 100%;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+}
+.products img{
+    height: 70%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.products img:hover{
+    transform: scale(1.05);
+    z-index: 2;
+}
+.food-opt1{
+    height: auto;
+    width: 80%;
+    padding: 2rem 2rem 2rem 0rem;
+    margin-top: 5rem;
+    margin-left: 6.6rem;
+}
+.products-ins{
+     height: 100%;
+    width: 100%;
+    padding: 1rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+.items-p{
+    height: 80%;
+    width: 13%;
+  
+    /* background-color: red; */
+}
+.items-p:hover{
+    transform: scale(1.05);
+    z-index: 2;
+}
+.imge-area{
+    height: 120%;
+    width:95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+.imge-area img{
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.items-p p {
+    font-size: 18px;
+    color:#02060cbf;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.scanner-sec {
+    margin-top: 8rem;
+    height: 60vh;
+    background-color: #d8d6d661;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.scanner-sec p{
+    font-size: 30px;
+    font-weight: 600;
+}
+.scanner-sec img{
+    height: 100%;
+}
+
+
+
+

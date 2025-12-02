@@ -1,0 +1,74 @@
+.popup-sec{
+    position: fixed;
+    top: 18%;
+    left: 30%;
+    height: 7vh;
+    width: 40%;
+    background-color: #1ba672;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 0.3rem 2.5rem 0.3rem 2.3rem;
+    opacity: 0;
+  animation: fadeInOut 5s ease-in-out forwards;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+ @keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+} 
+.popup-sec p{
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.direction-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.direction-cart i{
+    font-size: 14px;
+    color: #ffffff;
+}
+.direction-cart p{
+    text-decoration: underline;
+
+}
+
+.confirm-modal1 {
+  position: fixed;
+  top: 18%; left: 45%;
+  
+
+  z-index: 20006;
+}
+
+.confirm-content1 {
+  background: #fff;
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

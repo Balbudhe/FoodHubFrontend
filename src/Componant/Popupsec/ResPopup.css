@@ -1,0 +1,33 @@
+@media only screen and (max-width: 480px) {
+  .popup-sec {
+    position: fixed;
+    top: 12%;
+    left: 10%;
+    height: 5vh;
+    width: 65%;
+    z-index: 1000;
+  }
+
+  .popup-sec p {
+    font-size: 14px;
+  }
+
+  .direction-cart {
+    gap: 10px;
+  }
+  .direction-cart i {
+    font-size: 13px;
+  }
+
+  .confirm-modal1 {
+    top: 3%;
+    left: 26%;
+  }
+
+  .confirm-content1 {
+    padding: 1rem;
+  }
+  .confirm-content1 p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,21 @@
+@media only screen and (max-width: 480px) {
+  .about-sec {
+    padding-top: 8rem;
+    width: 78%;
+    padding-left: 1rem;
+  }
+  .abouts-item{
+   width: 95%;
+    padding: 2rem 1.5rem 1rem 2rem;
+}
+  .abouts-item h3{
+    color: #d92827;
+    font-size: 28px;
+    padding-bottom: 3rem;
+}
+.abouts-item p{
+    padding-bottom: 1.5rem;
+    font-size: 12px;
+    
+}
+}

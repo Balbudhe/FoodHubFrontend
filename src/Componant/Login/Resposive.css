@@ -1,0 +1,399 @@
+@media (max-width: 1024px){
+  .foodhub-container {
+    height: 39vh;
+    text-align: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .left-food {
+    width: 30%;
+    height: 20%;
+    padding: 0.1rem;
+    margin-left: 4rem;
+  }
+
+  .left-food h1 {
+    font-size: 3rem;
+  }
+  .left-food p {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+}
+  .login-card {
+    width: 30%;
+    padding: 1.2rem 1.6rem;
+    margin-right: 9.5rem;
+  }
+.login-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .forget-sec{
+    text-align: end;
+    margin-bottom: 0.8rem;
+}
+.forget-sec a{
+  
+  font-size: 13px;
+}
+  .login-card input {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .login-btn button {
+    font-size: 0.8rem;
+    width: 95%;
+    padding: 0.6em;
+  }
+   .reset-sec{
+    font-size: 14px;
+    margin-top: 0.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .foodhub-container {
+    height: 50vh;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .left-food {
+    width: 80%;
+    padding: 0.5rem;
+  }
+
+  .left-food h1 {
+    font-size: 1.8rem;
+  }
+  .left-food p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+  .login-card {
+    width: 50%;
+    padding: 1.2rem 1.6rem;
+    margin-right: 1.7rem;
+  }
+.login-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .forget-sec{
+    text-align: end;
+    margin-bottom: 0.8rem;
+}
+.forget-sec a{
+  
+  font-size: 12px;
+}
+  .login-card input {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .login-btn button {
+    font-size: 0.7rem;
+    width: 95%;
+    padding: 0.55em;
+  }
+   .reset-sec{
+    font-size: 11px;
+    margin-top: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .foodhub-container {
+    flex-direction: column;
+     height: 90vh;
+     overflow: hidden;
+     justify-content: start;
+
+     
+  }
+   .left-food {
+    margin-top: 4rem;
+    width: 100%;
+    text-align: center;
+    height: 15%;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    align-items: start;
+  }
+  .left-food h1 {
+    font-size: 2rem;
+  }
+
+  .left-food p {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+
+  .login-card {
+    width: 76%;
+    height: auto;
+    padding: 1.3rem 0.9rem;
+    margin-left: 1.7rem;
+  }
+
+  .login-card h2 {
+    font-size: 1.9rem;
+  }
+
+  .login-card input {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  .forget-sec{
+    margin-top: 0.2rem;
+     margin-bottom: 1.2rem;
+}
+.forget-sec a{
+  
+  font-size: 15px;
+}
+  .login-btn button {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+  .reset-sec{
+    font-size: 16px;
+    margin-top: 1.4rem;
+  }
+}
+/* @media (max-width: 380px){
+  .foodhub-container {
+    
+     height: 76.9vh;
+     justify-content: start;
+     text-align: start;
+     
+  }
+   .left-food {
+    height: 10%;
+    margin-top: 4rem;
+   }
+   .left-food p{
+    margin-top: 0.2rem;
+   }
+   .login-card h2 {
+    margin-bottom: 0.6rem;
+  }
+} */
+
+
+/* @media  (max-width: 769px) {
+  .left-food {
+    width: 45%;
+    
+  }
+
+  .left-food h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcb05;
+  }
+
+  .left-food p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .login-card {
+    width: 27%;
+    height: 43%;
+  }
+  .login-card h2 {
+  font-size: 19px;
+  margin-bottom: 1.1rem;}
+
+  .login-card input{
+    height: 1.5rem;
+    font-size: 11.5px;
+    margin-bottom: 0.7rem;
+  }
+
+  .forget-sec{
+    margin-bottom: 0.2rem;
+}
+  .forget-sec a{
+    font-size: 11.5px;
+  }
+  .login-btn button{
+    padding: 0.4rem;
+    width: 98%;
+    font-size: 11.5px;
+  }
+  .reset-sec{
+    font-size: 11.5px;
+  }
+}
+ @media  (max-width: 580px) {
+    .foodhub-container{
+        gap: 18px;
+    }
+  .left-food {
+    width: 35%;
+    padding-left: 1.5rem;
+  }
+
+  .left-food h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcb05;
+  }
+
+  .left-food p {
+    margin-top: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .login-card {
+    width: 34%;
+    height: 35%;
+     padding: 1.2rem 1.6rem;
+  }
+  .login-card h2 {
+  font-size: 15.5px;
+  margin-bottom: 0.8rem;
+}
+
+  .login-card input{
+    height: 1rem;
+    font-size: 10px;
+    margin-bottom: 0.4rem;
+  }
+
+  .forget-sec{
+    margin-bottom: 0.1rem;
+}
+  .forget-sec a{
+    font-size: 10px;
+  }
+  .login-btn{
+    margin-top: 0.4rem;
+}
+  .login-btn button{
+    padding: 0.4rem;
+    width: 98%;
+    font-size: 9px;
+  }
+  .reset-sec{
+    margin-top: 0.65rem;
+    font-size: 9.3px;
+  }
+}
+@media  (max-width: 377px) {
+    .foodhub-container{
+        gap: 18px;
+    }
+  .left-food {
+    width: 31%;
+    height: 30%;
+    padding-left: 1rem;
+  }
+
+  .left-food h1 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ffcb05;
+  }
+
+  .left-food p {
+    margin-top: 0.5rem;
+    font-size: 0.4rem;
+  }
+
+  .login-card {
+    width: 33%;
+    height: 28%;
+     padding: 1.2rem 1.2rem;
+  }
+  .login-card h2 {
+  font-size: 13px;
+  margin-bottom: 0.6rem;
+}
+
+  .login-card input{
+    height: 0.8rem;
+    font-size: 8px;
+    margin-bottom: 0.2rem;
+  }
+
+  
+  .forget-sec a{
+    font-size: 8px;
+  }
+  .login-btn{
+    margin-top: 0.3rem;
+}
+  .login-btn button{
+    padding: 0.2rem;
+    width: 98%;
+    font-size: 8px;
+  }
+  .reset-sec{
+    margin-top: 0.7rem;
+    font-size: 8px;
+  }
+}
+@media  (max-width: 320px) {
+    .foodhub-container{
+        gap: 18px;
+    }
+  .left-food {
+    width: 28%;
+    height: 28%;
+    padding-left: 0.4rem;
+  }
+
+  .left-food h1 {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #ffcb05;
+  }
+
+  .left-food p {
+    margin-top: 0.2rem;
+    font-size: 0.3rem;
+  }
+
+  .login-card {
+    width: 33%;
+    height: 25%;
+     padding: 1rem 1rem;
+  }
+  .login-card h2 {
+  font-size: 10.5px;
+  margin-bottom: 0.4rem;
+}
+
+  .login-card input{
+    height: 0.6rem;
+    font-size: 6.5px;
+    margin-bottom: 0.1rem;
+  }
+
+  .forget-sec{
+    margin-bottom: 0.5rem;
+  }
+  .forget-sec a{
+    font-size: 6.5px;
+  }
+  .login-btn{
+    margin-top: 0rem;
+}
+  .login-btn button{
+    padding: 0.24rem;
+    width: 90%;
+    font-size: 5px;
+  }
+  .reset-sec{
+    margin-top: 0.6rem;
+    font-size: 6.5px;
+  }
+} */

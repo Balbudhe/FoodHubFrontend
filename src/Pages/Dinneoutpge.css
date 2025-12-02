@@ -1,0 +1,33 @@
+.dinneoutpge-sec{
+    height: auto;
+    width: 100%;
+}
+.template-sec{
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template-sec img{
+    height: 80%;
+    width: 70%;
+}
+
+
+@media only screen and (max-width:480px) {
+     .template-sec {
+        height: 35vh;
+        padding: 0rem 0rem 0rem;
+        width: 100%;
+       overflow: hidden;
+    }
+
+    .template-sec img {
+        margin-top: 2.68rem; 
+        width: 100%;
+        height: 100%;
+        
+        object-fit: fill;
+    }
+}
