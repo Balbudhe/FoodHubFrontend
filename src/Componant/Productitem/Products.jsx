@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Product.css";
 import API from "../../Utlis/Axios";
 import Popup from "../Popupsec/Popup";
@@ -7,17 +8,18 @@ const Products = (props) => {
   const [popup, setPopup] = useState(false);
   const [popupmsg, setPopmsg] = useState();
   // const [products,setProducts]=useState([])
+const navigate = useNavigate();
+  
   async function handleaddbtn(item) {
+    const tok = localStorage.getItem("token");
     const data = {
       name: item.proname,
       price: item.price,
       image: item.image,
     };
-    // setProducts(prev=>[...prev,data]);
 
-    console.log(data);
-
-    try {
+    if(tok){
+      try {
       await API.post("/products", data);
       setPopup(true);
       setPopmsg("An item added");
@@ -25,6 +27,12 @@ const Products = (props) => {
     } catch (e) {
       setPopmsg("Failed to save product");
     }
+    }
+    else{
+      alert("Please Login");
+      navigate("/login")
+    }
+    
   }
 
   return (
