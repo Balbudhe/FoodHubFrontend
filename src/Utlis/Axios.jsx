@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({baseURL:"http://192.168.29.2:5000/api"});
+const API = axios.create({baseURL:"https://foodhub-server-d95v.onrender.com/api"});
 
 API.interceptors.request.use((req)=>{
     const token=localStorage.getItem("token");
