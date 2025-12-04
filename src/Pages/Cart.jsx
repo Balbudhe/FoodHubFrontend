@@ -18,6 +18,11 @@ const Cart = ({ close }) => {
   const [discount, setDiscount] = useState(0);
   const [discpage, setDiscpage] = useState(false);
   const [discname, setDiscname] = useState("");
+  const [loading,setLoading]=useState(true);
+
+  const userdata = localStorage.getItem("user");
+  const loggedUser = userdata ? JSON.parse(userdata) : null;
+  const userId = loggedUser?._id;
 
   useEffect(() => {
     if (showQr) {
@@ -28,12 +33,17 @@ const Cart = ({ close }) => {
   }, [showQr]);
   const fetchprod = async () => {
     try {
+      setLoading(true);
       const ap = await API.get("/products");
-      setProducts(ap.data);
-      setQuantity(Array(ap.data.length).fill(1));
+      const userProducts = ap.data.filter(item => item.userId === userId);
+      setProducts(userProducts);
+      setQuantity(Array(userProducts.length).fill(1));
     } catch (e) {
       setPop(true);
-      setMssg("failed to load products", e);
+      setMssg("Failed to load products");
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -152,7 +162,9 @@ const Cart = ({ close }) => {
           <i className="fa-solid fa-xmark" onClick={close}></i>
         </div>
         <div className="cart-items">
-          {products.length === 0 ? (
+          {loading ?( <p style={{ textAlign: "center", fontSize: "25px", marginTop: "3rem" }}>
+              Loading...
+            </p>):products.length === 0 ? (
             <p
               style={{
                 textAlign: "center",

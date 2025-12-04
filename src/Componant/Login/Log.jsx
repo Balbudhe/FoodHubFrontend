@@ -24,13 +24,14 @@ const Log = (props) => {
       const ap = await API.post(props.apipath, userdata);
       
       if (props.apipath.includes("login")) {
+         setPop(true);
+        setMssg("✅ Login sucessfull");
+        setTimeout(() => setPop(false), 1000);
+        setTimeout(() => navigate("/"), 1000);
         localStorage.setItem("token", ap.data.token);
         localStorage.setItem("user", JSON.stringify(ap.data.user));
         localStorage.setItem("justLoggedIn", "true");
-        setPop(true);
-        setMssg("✅ Login sucessfull");
-        setTimeout(() => setPop(false), 2000);
-        setTimeout(() => navigate("/"), 2000);
+       
       } else if (props.apipath.includes("register")) {
         setPop(true);
         setMssg("✅ Register Suceesfully");

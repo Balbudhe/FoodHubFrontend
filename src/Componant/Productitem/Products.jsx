@@ -8,8 +8,8 @@ const Products = (props) => {
   const [popup, setPopup] = useState(false);
   const [popupmsg, setPopmsg] = useState();
   // const [products,setProducts]=useState([])
-const navigate = useNavigate();
-  
+  const navigate = useNavigate();
+
   async function handleaddbtn(item) {
     const tok = localStorage.getItem("token");
     const data = {
@@ -18,21 +18,20 @@ const navigate = useNavigate();
       image: item.image,
     };
 
-    if(tok){
+    if (tok) {
       try {
-      await API.post("/products", data);
-      setPopup(true);
-      setPopmsg("An item added");
-       setTimeout(()=>setPopup(false),5000)
-    } catch (e) {
-      setPopmsg("Failed to save product");
-    }
-    }
-    else{
+        setPopup(true);
+        setPopmsg("An item added");
+        await API.post("/products", data);
+
+        setTimeout(() => setPopup(false), 4000);
+      } catch (e) {
+        setPopmsg("Failed to save product");
+      }
+    } else {
       alert("Please Login");
-      navigate("/login")
+      navigate("/login");
     }
-    
   }
 
   return (
