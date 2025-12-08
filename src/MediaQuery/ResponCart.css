@@ -3,6 +3,7 @@
     height: 65vh;
     width: 77%;
     left: 3%;
+    z-index: 10007;
     top: 15%;
     
   }

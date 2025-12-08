@@ -45,18 +45,91 @@
       
   }
   .mobile-menu-icon i{
-    font-size: 21px;
+    font-size: 22px;
   }
-  .menu-sec{
-    top:10%;
-    left:52%;
+  .toggle-slide{
+    height: 100vh;
+    width: 100%;
     position: fixed;
-    width: 130px;
-    z-index: 10001;
-    height: auto;
+    top: 0%;
+     z-index: 10005;
+     background: rgba(0, 0, 0, 0.6);
   }
-  .menu-item a{
-    font-size: 16px;
+  .slide-sec{
+    top:0%;
+    right:0%;
+    position: fixed;
+    width: 190px;
+   
+   
+    height: 100vh;
+    background-color: #d92827;
+  }
+  .profile-sec{
+    margin-top: 1rem;
+    padding: 2.5rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f7f7f7;
+  }
+  .slide-items{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+  }
+  .slide-items a{
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .slide-items p{
+    font-size: 19px;
+    color: #fff;
+  }
+  .profile-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  .profile-img i{
+    font-size: 22px;
+  }
+  .profile-name{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-name p{
+    color: #f7f7f7;
+    font-size: 19px;
+
+  }
+  .profile-login{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .profile-login p{
+    font-size: 25px;
+    color: #f7f7f7;
+  }
+  .profile-login button{
+    height: 43px;
+    margin-top: 2rem;
+    width: 85px;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
   }
   #cart-p{
     text-align: center;
@@ -65,9 +138,13 @@
     padding-bottom: 0.7rem;
     border-bottom: 1px solid #333;
   }
+  .logout-sec{
+    display: none;
+  }
   .login-sec{
   background-color: #d92827;
   padding-bottom: 0.8rem;
+  display: none;
   }
   .login-sec i{
     font-size: 25px;
@@ -75,8 +152,8 @@
     color: #fff;
   }
   .username-sec {
-  right: 10px;
-  top: 105px;
+  right: 5px;
+  top: 65px;
   width: auto;
   text-align: center;
   padding: 0.7rem 1rem 0.7rem 1rem;
@@ -93,7 +170,7 @@
 }
   .confirm-modal{
      height: 100vh;
-    z-index: 2001;
+    z-index: 20001;
   width: 101vw;
   align-items: start;
   padding-top: 17rem;

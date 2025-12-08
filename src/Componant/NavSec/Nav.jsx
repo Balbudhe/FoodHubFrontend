@@ -18,6 +18,7 @@ const Nav = () => {
   const [pop, setPop] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [menuToggle, setMenuToggle] = useState(false);
+  const [slidebar, setSlidebar] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     const tok = localStorage.getItem("token");
@@ -43,12 +44,19 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    if (showConfirm ) {
+    if (showConfirm) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
   }, [showConfirm]);
+  useEffect(() => {
+    if (slidebar) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [slidebar]);
   useEffect(() => {
     if (cartpag) {
       document.body.classList.add("no-scroll");
@@ -60,7 +68,7 @@ const Nav = () => {
     setCartpg(false);
   };
   const toggleMenu = () => {
-    setMenuToggle(!menuToggle);
+    setSlidebar(!menuToggle);
   };
   function handellogout() {
     localStorage.removeItem("token");
@@ -106,15 +114,25 @@ const Nav = () => {
     const handletoggleclickout = (e) => {
       if (
         !e.target.closest(".mobile-menu-icon") &&
-        !e.target.closest(".menu-sec")
+        !e.target.closest(".slide-sec")
       ) {
-        setMenuToggle(false);
+        setSlidebar(false);
       }
     };
 
     document.addEventListener("click", handletoggleclickout);
     return () => document.removeEventListener("click", handletoggleclickout);
   }, []);
+  // useEffect(() => {
+  //   const handleslideclick = (e) => {
+  //     if (!e.target.closest(".slide-sec")) {
+  //       setMenuToggle(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("click", handleslideclick);
+  //   return () => document.removeEventListener("click", handleslideclick);
+  // }, []);
 
   const prod = JSON.parse(localStorage.getItem("searchitem"));
   const filt = prod.filter((ite) =>
@@ -189,16 +207,17 @@ const Nav = () => {
         <div className="mobile-menu-icon" onClick={toggleMenu}>
           <i className="fa-solid fa-bars"></i>
         </div>
+        {isLogin && (
+          <div
+            className="username-sec"
+            style={{ display: namepop ? "block" : "none" }}
+          >
+            <span>{`Welcome ${userName},👋 Order Here!!`}</span>
+          </div>
+        )}
         <div className="logout-sec">
           {isLogin ? (
             <>
-              <div
-                className="username-sec"
-                style={{ display: namepop ? "block" : "none" }}
-              >
-                <span>{`Welcome ${userName},👋 Order Here!!`}</span>
-              </div>
-
               <div className="login-sec">
                 <button onClick={() => setShowConfirm(true)}>
                   <i className="fa-solid fa-right-from-bracket"></i>
@@ -227,29 +246,53 @@ const Nav = () => {
             </div>
           </div>
         )}
-        {menuToggle && (
-          <div className="menu-sec">
-            <div className="menu-item">
-              <Link to="/">Home</Link>
-            </div>
-
-            <div className="menu-item">
-              <Link to="/shop">Shop</Link>
-            </div>
-
-            <p id="cart-p" onClick={() => setCartpg(true)}>
-              Cart
-            </p>
-            <div className="menu-item">
-              <Link to="/aboutus">About Us</Link>
-            </div>
-            <div className="menu-item">
-              <Link to="/contactus">Contact Us</Link>
-            </div>
-          </div>
-        )}
       </div>
+      {slidebar && (
+        <div className="toggle-slide">
+          <div className="slide-sec">
+            {isLogin ? (
+              <>
+                <div className="profile-sec">
+                  <div className="profile-img">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div className="profile-name">
+                    <p>Welcome,</p>
+                  <p>{userName.toUpperCase()}</p>
 
+                  </div>
+                </div>
+                <div className="slide-items">
+                  <Link to="/">Home</Link>
+                </div>
+                <div className="slide-items">
+                  <Link to="/shop">Shop</Link>
+                </div>
+                <div className="slide-items">
+                  <p onClick={() => setCartpg(true)}>Cart</p>
+                </div>
+                <div className="slide-items">
+                  <Link to="/aboutus">About Us</Link>
+                </div>
+                <div className="slide-items">
+                  <Link to="/contactus">Contact Us</Link>
+                </div>
+                <div className="slide-items">
+                  <p onClick={() => setShowConfirm(true)}>Logout</p>
+                </div>
+              </>
+            ) : (
+              <div className="profile-login">
+                <p>Please Login</p>
+
+                <Link to="/login">
+                  <button>Login</button>
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
       {pop && <Popupitem msg={mssg}></Popupitem>}
 
       {showConfirm && (

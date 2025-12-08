@@ -18,7 +18,7 @@ const Cart = ({ close }) => {
   const [discount, setDiscount] = useState(0);
   const [discpage, setDiscpage] = useState(false);
   const [discname, setDiscname] = useState("");
-  const [loading,setLoading]=useState(true);
+  const [loading, setLoading] = useState(true);
 
   const userdata = localStorage.getItem("user");
   const loggedUser = userdata ? JSON.parse(userdata) : null;
@@ -35,14 +35,13 @@ const Cart = ({ close }) => {
     try {
       setLoading(true);
       const ap = await API.get("/products");
-      const userProducts = ap.data.filter(item => item.userId === userId);
+      const userProducts = ap.data.filter((item) => item.userId === userId);
       setProducts(userProducts);
       setQuantity(Array(userProducts.length).fill(1));
     } catch (e) {
       setPop(true);
       setMssg("Failed to load products");
-    }
-    finally{
+    } finally {
       setLoading(false);
     }
   };
@@ -65,7 +64,7 @@ const Cart = ({ close }) => {
     0
   );
 
-  const total=subtotal-discount;
+  const total = subtotal - discount;
   const handleDelete = async (id) => {
     try {
       await API.delete(`/products/${id}`);
@@ -113,7 +112,7 @@ const Cart = ({ close }) => {
         usename: use.name,
         orderid: Math.floor(Math.random() * 10000),
         discounts: discount,
-        alltotal:subtotal,
+        alltotal: subtotal,
         subtotal: total,
         logo: "https://global.foodhub.com/img/favicon.png",
       };
@@ -146,8 +145,8 @@ const Cart = ({ close }) => {
     if (discname.trim() === "") {
       alert("No name added");
     } else if (discname.trim().toLowerCase() === "ritik") {
-     setDiscount(50);
-     setDiscpage(false);
+      setDiscount(50);
+      setDiscpage(false);
     } else {
       alert("Unsuccessful");
       setShowPrompt(false);
@@ -162,9 +161,9 @@ const Cart = ({ close }) => {
           <i className="fa-solid fa-xmark" onClick={close}></i>
         </div>
         <div className="cart-items">
-          {loading ?( <p style={{ textAlign: "center", fontSize: "25px", marginTop: "3rem" }}>
-              Loading...
-            </p>):products.length === 0 ? (
+          {loading ? (
+            <div className="spinner"></div>
+          ) : products.length === 0 ? (
             <p
               style={{
                 textAlign: "center",
@@ -226,7 +225,7 @@ const Cart = ({ close }) => {
             </div>
             <div className="discount-sec">
               <span>Discount : </span>
-              <p>Rs.{discount ===0 ? 0 : -discount}</p>
+              <p>Rs.{discount === 0 ? 0 : -discount}</p>
             </div>
             <div className="sub-totalse">
               <span>SubTotal : </span>

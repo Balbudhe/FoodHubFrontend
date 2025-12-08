@@ -14,16 +14,18 @@ const Log = (props) => {
   });
   const [mssg, setMssg] = useState("");
   const [pop, setPop] = useState(false);
+  const [loading,setLoading]=useState(false);
   const handelinput = (e) => {
     setUserdata({ ...userdata, [e.target.name]: e.target.value });
   };
   const handelclick = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const ap = await API.post(props.apipath, userdata);
       
       if (props.apipath.includes("login")) {
+         setLoading(false);
          setPop(true);
         setMssg("✅ Login sucessfull");
         setTimeout(() => setPop(false), 1000);
@@ -99,6 +101,10 @@ const Log = (props) => {
     </div>
     {
       pop && <Popupitem msg={mssg} ></Popupitem>
+    }
+    {
+      loading &&
+       <div className="spinner"></div>
     }
     
     </>

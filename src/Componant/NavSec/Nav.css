@@ -114,7 +114,7 @@
   color: #111;
 }
 .username-sec {
-  position: absolute;
+  position: fixed;
   display: none;
   right: 10px;
   top: 65px;
